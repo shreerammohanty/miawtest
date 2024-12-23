@@ -16,14 +16,13 @@
 		};
 		document.head.appendChild(script);  // Append the script to the head of the document
 		console.log("Loaded Script for ReCaptcha");
-	}
-
- script.onload = function() {
+	 script.onload = function() {
         console.log("ReCaptcha script loaded successfully");
         if (callback && typeof callback === 'function') {
             handleInvisibleReCaptcha();  // Call the provided callback function
         }
     };
+	}
 
 	function handleInvisibleReCaptcha() {
 		// Trigger the invisible Turnstile when needed (e.g., after a user action)
