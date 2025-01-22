@@ -27,16 +27,16 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-	function setJwtToken(){
-		embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
-		    identityTokenType : "JWT",
-		    identityToken : "eyJraWQiOiIxMjM0NSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJ0ZXN0SXNzdWVyIiwic3ViIjoidXNlcjEiLCJleHAiOjE3MzgwNjE4OTAsImlhdCI6MTczNzQ2MTg5MH0.HLYTCtSrspg2bvQyvVfcd6nO19Z8DEmEvpkU3jxSaPctnefPcmZ9D5xmdChwb-DGLLboTZeg6x1TBUOkx_5sSjWEP3u9b7f6lVw59Vac7hQk-4Nht8Ptup2E8J63B2npISE3j57WBCmdUtshYNF-dziH5WJr4XV8I1tOAWsNvlSW7eS2i8CUueKoWvo6TliB_IvzsRJaiP7A5EBzJIx68xLuJAy-Oe-4PlRGg3o0M-1JNniLXWj94PpPcJEPjGHqb1mOA533bdr93USbdCsXsASh85gzqxVIW3xWcesbiYj5JNHH5x6nAev4i43VNxnKtw7kXS4vCIOLV8aUIBPfBA"
-		});
-        }
-	window.addEventListener("onEmbeddedMessagingReady",() => {
-		setJwtToken();
-		console.log("JWT Token is Set");
-	});
+	// function setJwtToken(){
+	// 	embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
+	// 	    identityTokenType : "JWT",
+	// 	    identityToken : "eyJraWQiOiIxMjM0NSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJ0ZXN0SXNzdWVyIiwic3ViIjoidXNlcjEiLCJleHAiOjE3MzgwNjE4OTAsImlhdCI6MTczNzQ2MTg5MH0.HLYTCtSrspg2bvQyvVfcd6nO19Z8DEmEvpkU3jxSaPctnefPcmZ9D5xmdChwb-DGLLboTZeg6x1TBUOkx_5sSjWEP3u9b7f6lVw59Vac7hQk-4Nht8Ptup2E8J63B2npISE3j57WBCmdUtshYNF-dziH5WJr4XV8I1tOAWsNvlSW7eS2i8CUueKoWvo6TliB_IvzsRJaiP7A5EBzJIx68xLuJAy-Oe-4PlRGg3o0M-1JNniLXWj94PpPcJEPjGHqb1mOA533bdr93USbdCsXsASh85gzqxVIW3xWcesbiYj5JNHH5x6nAev4i43VNxnKtw7kXS4vCIOLV8aUIBPfBA"
+	// 	});
+ //        }
+	// window.addEventListener("onEmbeddedMessagingReady",() => {
+	// 	setJwtToken();
+	// 	console.log("JWT Token is Set");
+	// });
 </script>
 <script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawCaptchaTestChannel1735805495698/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
