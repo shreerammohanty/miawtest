@@ -12,15 +12,13 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			// embeddedservice_bootstrap.settings.captchaEnabled = true; 
-			// embeddedservice_bootstrap.settings.siteKey = '6LfmlMQqAAAAAJTqymYIAPI1pMk1ArbT4doPkQ_X';
 
 			embeddedservice_bootstrap.init(
 				'00Dxx0000006GoF',
-				'miawCaptchaTestChannelChat2',
-				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawCaptchaTestChannel1735805495698',
+				'miawAuthdeployment1',
+				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawAuthdeployment11739177250245',
 				{
-					scrt2URL: 'https://ram.my.localhost.sfdcdev.salesforce-scrt.com:18000'
+					scrt2URL: 'http://ram.my.localhost.sfdcdev.salesforce-scrt.com:18000'
 				}
 			);
 		} catch (err) {
@@ -38,7 +36,7 @@
 		console.log("JWT Token is Set");
 	});
 </script>
-<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawCaptchaTestChannel1735805495698/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawAuthdeployment11739177250245/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
