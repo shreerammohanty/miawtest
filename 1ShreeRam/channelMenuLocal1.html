@@ -8,32 +8,26 @@
 <h1> In APP Web Client for TestCaptcha Deployment</h1>
 <p><a id="editThisPageLink" target="_blank" style="color:blue">Edit this page</a></p>
 	<script>document.getElementById('editThisPageLink').href = "https://github.com/shreerammohanty/miawtest/edit/master/RamMiaw.html";</script>
-  <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
-<script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		// Required if you want labels in a language that’s different from your user’s context.
-		//embedded_svc.menu.settings.language = ''; //For example, enter 'en' or 'en-US'
+ <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-		embedded_svc.menu.init(
-			'https://ram.my.localhost.sfdcdev.salesforce.com:6101',
-			'https://shreera-ltmjfbm.internal.salesforce.com:8096/chat',
-			gslbBaseURL,
-			'00Dxx0000006GoF',
-			'channelMenu'
-		);
+			embeddedservice_bootstrap.init(
+				'00Dxx0000006GoF',
+				'testCaptcha',
+				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWtestCaptcha1732604734188',
+				{
+					scrt2URL: 'https://ram.my.localhost.sfdcdev.salesforce-scrt.com:18000'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
 	};
-
-	if (!window.embedded_svc || !window.embedded_svc.menu) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://ram.my.localhost.sfdcdev.salesforce.com:6101/embeddedservice/menu/fab.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
 </script>
+<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWtestCaptcha1732604734188/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 </body>
 </html>
