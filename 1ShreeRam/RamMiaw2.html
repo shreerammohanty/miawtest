@@ -6,21 +6,17 @@
 <body>
  
 <h1> In APP Web Client for TestCaptcha Deployment</h1>
-<div id="abc" class="abc" style="height: 50vh; width: 50vw; background-color: lightblue; margin: 0; position: absolute; top: 25vh; left: 25vw; overflow: hidden; position: relative;">
-    <!-- TargetElement -->
-</div>
 <p><a id="editThisPageLink" target="_blank" style="color:blue">Edit this page</a></p>
 	<script>document.getElementById('editThisPageLink').href = "https://github.com/shreerammohanty/miawtest/edit/master/1ShreeRam/RamMiaw2.html";</script>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			// embeddedservice_bootstrap.settings.targetElement = document.querySelector('#abc');
 
 			embeddedservice_bootstrap.init(
 				'00Dxx0000006GoF',
-				'miawTestCaptcha',
-				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawTestCaptcha1734431521883',
+				'testCaptcha',
+				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWtestCaptcha1732604734188',
 				{
 					scrt2URL: 'https://ram.my.localhost.sfdcdev.salesforce-scrt.com:18000'
 				}
@@ -30,6 +26,7 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawTestCaptcha1734431521883/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWtestCaptcha1732604734188/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
