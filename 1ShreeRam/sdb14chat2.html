@@ -15,8 +15,8 @@
 
 			embeddedservice_bootstrap.init(
 				'00DRZ00000306Wj',
-				'miawTestCaptchaAuth2',
-				'https://chat3.test2.my.pc-rnd.site.com/ESWmiawTestCaptchaAuth21743643504822',
+				'miawTestCaptcha2',
+				'https://chat3.test2.my.pc-rnd.site.com/ESWmiawTestCaptcha21743476245367',
 				{
 					scrt2URL: 'https://chat3.test2.my.pc-rnd.salesforce-scrt.com'
 				}
@@ -26,19 +26,20 @@
 		}
 	};
 
-	function setJwtToken(){
-		embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
-		    identityTokenType : "JWT",
-		    identityToken : "eyJraWQiOiIxMjM0NSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJ0ZXN0SXNzdWVyIiwic3ViIjoidXNlcjEiLCJleHAiOjE3NDUyMTI3MzAsImlhdCI6MTc0NDYxMjczMH0.dXe7k6QYb4e3L3-_CPuvatXepMzmDB2kcP9IMjkzFHtNNrKPItlnaMvzviFyHmWlqBvPmw0gvvI8nmX6dwKPTuejXh0cnmJxbJNoKcvNvSLr_7yWBti_ZIeADThWGOuCkrzo8o4R0ZaEybxj53_HnVNFhMPbhrb_MKXj4khCWUcrL-Dv1ThImRgFYenvM605moyGT906Lh5gLyQbdNklosz3gk_xvet73dZ5rstaaHgfQOsRDuzaghmtSpVvfbVm-8vg7ZcYm89Cug2fPb1v8GfEC9Og6CmLAWuleZPcMv-218rS0HEVq8t1bei2a841cO7J5pO740LHNsY8Ipe09g"
-		});
-        }
-	window.addEventListener("onEmbeddedMessagingReady",() => {
-		setJwtToken();
-		console.log("JWT Token is Set");
-	});
+	// function setJwtToken(){
+	// 	embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
+	// 	    identityTokenType : "JWT",
+	// 	    identityToken : "eyJraWQiOiIxMjM0NSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJ0ZXN0SXNzdWVyIiwic3ViIjoidXNlcjEiLCJleHAiOjE3NDUyMTI3MzAsImlhdCI6MTc0NDYxMjczMH0.dXe7k6QYb4e3L3-_CPuvatXepMzmDB2kcP9IMjkzFHtNNrKPItlnaMvzviFyHmWlqBvPmw0gvvI8nmX6dwKPTuejXh0cnmJxbJNoKcvNvSLr_7yWBti_ZIeADThWGOuCkrzo8o4R0ZaEybxj53_HnVNFhMPbhrb_MKXj4khCWUcrL-Dv1ThImRgFYenvM605moyGT906Lh5gLyQbdNklosz3gk_xvet73dZ5rstaaHgfQOsRDuzaghmtSpVvfbVm-8vg7ZcYm89Cug2fPb1v8GfEC9Og6CmLAWuleZPcMv-218rS0HEVq8t1bei2a841cO7J5pO740LHNsY8Ipe09g"
+	// 	});
+ //        }
+	// window.addEventListener("onEmbeddedMessagingReady",() => {
+	// 	setJwtToken();
+	// 	console.log("JWT Token is Set");
+	// });
 	
 </script>
-<script type='text/javascript' src='https://chat3.test2.my.pc-rnd.site.com/ESWmiawTestCaptchaAuth21743643504822/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://chat3.test2.my.pc-rnd.site.com/ESWmiawTestCaptcha21743476245367/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 
 
