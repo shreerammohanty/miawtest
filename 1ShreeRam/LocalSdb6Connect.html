@@ -42,27 +42,44 @@
  
 <h1> In APP Web Client for TestCaptcha Deployments</h1>
 <p><a id="editThisPageLink" target="_blank" style="color:blue">Edit this page</a></p>
-<style>
-  .embeddedMessagingGRecaptchaBanner {
-  display: none;
-}
-</style>
-<script>
-  document.getElementById('editThisPageLink').href = "https://github.com/shreerammohanty/miawtest/edit/master/1ShreeRam/LocalSdb6Connect.html";
-</script>
-	<!-- reCAPTCHA v3 script -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lfy2HMrAAAAAIVf2zhrlxQ-6ht07tNdfNUrD3p9"></script>
 
-<!-- Initialize reCAPTCHA v3 
+	<script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 <script>
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6Lfy2HMrAAAAAIVf2zhrlxQ-6ht07tNdfNUrD3p9', {action: 'homepage'}).then(function(token) {
-      // You can use the token in your backend verification
-      console.log('reCAPTCHA v3 token:', token);
+	
+  document.getElementById('editThisPageLink').href =
+    "https://github.com/shreerammohanty/miawtest/edit/master/1ShreeRam/LocalSdb6Connect.html";
+
+  let recaptchaWidgetId = null;
+
+  function onRecaptchaLoad() {
+    recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+      sitekey: '6Lfy2HMrAAAAAIVf2zhrlxQ-6ht07tNdfNUrD3p9',
+      size: 'invisible',
+      callback: onVerify,
+      'error-callback': onError,
+      'expired-callback': onExpired
     });
-  });
+
+    // Execute immediately, no button required
+    grecaptcha.execute(recaptchaWidgetId);
+  }
+
+  function onVerify(token) {
+    console.log('reCAPTCHA token:', token);
+    // TODO: POST the token to your backend for verification
+    // fetch('/verify', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ token }) });
+  }
+
+  function onError() {
+    console.error('reCAPTCHA error');
+  }
+
+  function onExpired() {
+    console.warn('reCAPTCHA expired, re-executing…');
+    grecaptcha.execute(recaptchaWidgetId);
+  }
 </script>
-	-->
+
 
 <script type='text/javascript'>
   function initEmbeddedMessaging() {
