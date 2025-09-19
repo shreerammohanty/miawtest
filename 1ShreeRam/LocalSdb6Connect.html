@@ -39,68 +39,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body>
- 
-<h1> In APP Web Client for TestCaptcha Deployments</h1>
-<p><a id="editThisPageLink" target="_blank" style="color:blue">Edit this page</a></p>
+ <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-	<!-- Hidden container for the invisible widget -->
-<div id="recaptcha-container" style="display:none;"></div>
-
-	<script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
-<script>
-  document.getElementById('editThisPageLink').href =
-    "https://github.com/shreerammohanty/miawtest/edit/master/1ShreeRam/LocalSdb6Connect.html";
-
-  let recaptchaWidgetId = null;
-
-  function onRecaptchaLoad() {
-    recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
-      sitekey: '6Lfy2HMrAAAAAIVf2zhrlxQ-6ht07tNdfNUrD3p9',
-      size: 'invisible',
-      callback: onVerify,
-      'error-callback': onError,
-      'expired-callback': onExpired
-    });
-
-    // Execute immediately, no button required
-    grecaptcha.execute(recaptchaWidgetId);
-  }
-
-  function onVerify(token) {
-    console.log('reCAPTCHA token:', token);
-    // TODO: POST the token to your backend for verification
-    // fetch('/verify', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ token }) });
-  }
-
-  function onError() {
-    console.error('reCAPTCHA error');
-  }
-
-  function onExpired() {
-    console.warn('reCAPTCHA expired, re-executing…');
-    grecaptcha.execute(recaptchaWidgetId);
-  }
+			embeddedservice_bootstrap.init(
+				'00Dxx0000006GxP',
+				'web1',
+				'https://orgfarm-9f8af5a46c.my.localhost.sfdcdev.site.com:6101/ESWweb11758274232077',
+				{
+					scrt2URL: 'http://orgfarm-9f8af5a46c.my.localhost.sfdcdev.salesforce-scrt.com:18000'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
-
-
-<script type='text/javascript'>
-  function initEmbeddedMessaging() {
-    try {
-      embeddedservice_bootstrap.settings.language = 'en'; // For example, enter 'en' or 'en-US'
-      embeddedservice_bootstrap.init(
-        '00DSG00000FLDWH',
-        'miaw_client',
-        'https://ram.my.localhost.sfdcdev.site.com:6101/ESWa11754390730622',
-        {
-          scrt2URL: 'https://liveagent2.test1.my.pc-rnd.salesforce-scrt.com'
-        }
-      );
-    } catch (err) {
-      console.error('Error loading Embedded Messaging: ', err);
-    }
-  };
-</script>
-<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWa11754390730622/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://orgfarm-9f8af5a46c.my.localhost.sfdcdev.site.com:6101/ESWweb11758274232077/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body>
