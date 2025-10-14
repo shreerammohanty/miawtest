@@ -8,36 +8,26 @@
 <h1> In APP Web Client for TestCaptcha Deployment</h1>
 <p><a id="editThisPageLink" target="_blank" style="color:blue">Edit this page</a></p>
 	<script>document.getElementById('editThisPageLink').href = "https://github.com/shreerammohanty/miawtest/edit/master/RamMiaw.html";</script>
-<script type='text/javascript'>
+
+	<script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = false;
 
 			embeddedservice_bootstrap.init(
-				'00Dxx0000006GoF',
-				'miawDeployAuth5',
-				'https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawDeployAuth51744195903170',
+				'00DSB00000d1UYs',
+				'abc',
+				'https://orgfarm-e377b1ce73.test1.my.pc-rnd.site.com/ESWabc1760424633807',
 				{
-					scrt2URL: 'https://ram.my.localhost.sfdcdev.salesforce-scrt.com:18000'
+					scrt2URL: 'https://orgfarm-e377b1ce73.test1.my.pc-rnd.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-	function setJwtToken(){
-		embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
-		    identityTokenType : "JWT",
-		    identityToken : "eyJraWQiOiIxMjM0NSIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJ0ZXN0SXNzdWVyIiwic3ViIjoidXNlcjEiLCJleHAiOjIzNDA5OTM2OTMsImlhdCI6MTc0MDk5MzY5M30.EveOF-hdaxSBAqA8YnmwWP8_lgO3a8DSIC1ApN9gkoT2sEfzD7cxkieyeEnUTNNQWV49D6IT8UEyB0wXP-vuT7VZiRR0mQqRVo7W7hpctdmLW5uDZWOGuhNevJSNGzQetioRbVEt1dXxVu6GcG1Hgl1WIYrsUBx1UDk-z3Qnr7pg3liZMjzip4pxpAnlnpLgmtc85onCc-2XYs8ak_1DQ0Ha6nMcJi8iAbyDyHqi8hiNw0Y6TnA4mPz8zART-Ab-9dPUDkTxSSksQmVzJo4q2Fdlm2ruqqkH692kMJ-OQmJ4JJWSarGU48MVJn915YfFifmad_vopkm_fyL7pUL0Mg"
-		});
-        }
-	window.addEventListener("onEmbeddedMessagingReady",() => {
-		setJwtToken();
-		console.log("JWT Token is Set");
-	});
 </script>
-<script type='text/javascript' src='https://ram.my.localhost.sfdcdev.site.com:6101/ESWmiawDeployAuth51744195903170/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://orgfarm-e377b1ce73.test1.my.pc-rnd.site.com/ESWabc1760424633807/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 
